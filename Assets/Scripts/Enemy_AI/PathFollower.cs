@@ -42,6 +42,7 @@ public class PathFollower : MonoBehaviour
     private void PathComplete()
     {
         print("Ending");
-        Destroy(this.gameObject);
+        FindObjectOfType<PlayerHealthComponent>().TakeDamage(damage: 1);
+        Destroy(gameObject);
     }
 }
